@@ -13,6 +13,7 @@ const fileupload = require("express-fileupload");
 const isAuthenticated = require("./config/middleware/isAuthenticated");
 
 //Define middleware
+const cors = require("cors");
 if(process.env.NODE_ENV !== "production"){
   app.options("*", cors());
   app.use(cors());
